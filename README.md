@@ -2,6 +2,7 @@
 
 1. [Instalar serverless](#serverless)
 2. [Hola mundo](#new)
+3. [Endopoint con API Gateway](#apigateway)
 
 <a name="serverless"></a>
 ## Instalar Serverless y configuración inicial
@@ -74,4 +75,23 @@ sls invoke local -f hello -s dev -d '{"name": "Abel Alonso"}'
 
 El parámetro llega a la función en la variable *event*
 
- 
+<a name="apigateway"></a>
+## Endpoint con API Gateway
+
+En el archivo **serverless.yaml** añadimos dentro de la función el evento desencadenador: 
+
+~~~
+functions:
+  hello:
+    handler: handler.hello 
+    events: 
+      - http: 
+          path: hols-mundo
+          method: get
+~~~
+
+   ***Mucho ojo con la tabulación entre http y path***
+
+Volvemos a desplegar y el cambio relizado en serverless.yaml hará que en la lamda se genere un desencadenador de api gateway de forma automática. Podemos comprobar que esto funciona entrando en la URL que se genera al hacer el deploy. 
+
+En la consola de AWS podemos comprobar que efectivamente se ha creado un trigger para el get a esa url 
