@@ -1,5 +1,8 @@
 # Hola Mundo Serverless
 
+1. Instalar serverless
+2. [Hola mundo](#new)
+
 ## Instalar Serverless y configuración inicial
 
 Para instalar serverless 
@@ -13,7 +16,7 @@ Creamos unas nuevas credenciales en nuestra cuenta de AWS y copiamos la key y el
 ~~~
 serverless config credentials --provider aws --key <key> --secret <secret> 
 ~~~
-
+<a name="new"></a>
 ## Nuevo proyecto
 
 Creamos el proyecto estableciendo el proveedor y el lenguaje en el template y le damos un nombre 
@@ -62,16 +65,12 @@ sls invoke -f nombreFuncion -s entorno(dev, pro...)
 
 Si queremos ejecutarla en local añadimos el parámetro *local* después de *invoke*
 
- 
-
 A esta invocación podemos pasarle parámetros de esta forma 
 
- 
-
+~~~
 sls invoke local -f hello -s dev -d '{"name": "Abel Alonso"}' 
+~~~
 
- 
-
-El parámetro llega a la función en la variable event 
+El parámetro llega a la función en la variable *event*
 
  
