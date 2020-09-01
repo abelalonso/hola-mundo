@@ -95,3 +95,5 @@ functions:
 Volvemos a desplegar y el cambio relizado en serverless.yaml hará que en la lamda se genere un desencadenador de api gateway de forma automática. Podemos comprobar que esto funciona entrando en la URL que se genera al hacer el deploy. 
 
 En la consola de AWS podemos comprobar que efectivamente se ha creado un trigger para el get a esa url 
+
+![image1]('./images/image1.png)
