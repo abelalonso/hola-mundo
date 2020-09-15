@@ -10,7 +10,7 @@
 
 
 <a name="serverless"></a>
-## Instalar Serverless y configuración inicial
+## 1. Instalar Serverless y configuración inicial
 
 Para instalar serverless 
 
@@ -22,7 +22,7 @@ Creamos unas nuevas credenciales en nuestra cuenta de AWS y copiamos la key y el
 
 
 <a name="new"></a>
-## Nuevo proyecto
+## 2. Nuevo proyecto
 
 Creamos el proyecto estableciendo el proveedor y el lenguaje en el template y le damos un nombre 
 
@@ -70,7 +70,7 @@ El parámetro llega a la función en la variable *event*
 
 
 <a name="apigateway"></a>
-## Endpoint con API Gateway
+## 3. Endpoint con API Gateway
 
 En el archivo **serverless.yaml** añadimos dentro de la función el evento desencadenador: 
 
@@ -94,7 +94,7 @@ En la consola de AWS podemos comprobar que efectivamente se ha creado un trigger
 
 
 <a name="offline"></a>
-## Desarrollar en modo offline para evitar gastos en AWS
+## 4. Desarrollar en modo offline para evitar gastos en AWS
 
 Iniciamos el proyecto de node 
 
@@ -123,7 +123,7 @@ Este comando levantará un servidor local con nuestra función:
 
 
 <a name="params"></a>
-## Pasar y recoger parámetros en modo de segmento por la url
+## 5. Pasar y recoger parámetros en modo de segmento por la url
 
 Podemos pasar parámetros de segmento de la siguiente forma: 
 
@@ -159,7 +159,7 @@ module.exports.hello = async event => {
 
 
 <a name="post"></a>
-## Peticiones POST y parsear datos con Querystring
+## 6. Peticiones POST y parsear datos con Querystring
 
 Añadimos otra función a nuestro **handler.js**
 
@@ -228,7 +228,7 @@ module.exports.showUser = async event => {
 
 
 <a name="remove"></a>
-## Eliminar proyecto de AWS 
+## 7. Eliminar proyecto de AWS 
 
 Para eliminar lo desplegado en AWS simplemente debemos ejecutar 
 
