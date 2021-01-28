@@ -241,7 +241,10 @@ module.exports.showUser = async event => {
 <hr>
 
 <a name="remove"></a>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d26781df1a438fdba7895fa3f8a3f4eb0b90e731
 ## 7. Eliminar proyecto de AWS 
 
 Para eliminar lo desplegado en AWS simplemente debemos ejecutar 
