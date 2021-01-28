@@ -8,9 +8,11 @@
 6. [Añadimos otra función a nuestro handler.js](#post)
 7. [Eliminar proyecto de AWS](#remove)
 
+<hr>
 
 <a name="serverless"></a>
-## Instalar Serverless y configuración inicial
+
+## 1. Instalar Serverless y configuración inicial
 
 Para instalar serverless 
 
@@ -20,9 +22,11 @@ Creamos unas nuevas credenciales en nuestra cuenta de AWS y copiamos la key y el
  
 `serverless config credentials --provider aws --key <key> --secret <secret>`
 
+<hr>
 
 <a name="new"></a>
-## Nuevo proyecto
+
+## 2. Nuevo proyecto
 
 Creamos el proyecto estableciendo el proveedor y el lenguaje en el template y le damos un nombre 
 
@@ -68,9 +72,11 @@ A esta invocación podemos pasarle parámetros de esta forma
 
 El parámetro llega a la función en la variable *event*
 
+<hr>
 
 <a name="apigateway"></a>
-## Endpoint con API Gateway
+
+## 3. Endpoint con API Gateway
 
 En el archivo **serverless.yaml** añadimos dentro de la función el evento desencadenador: 
 
@@ -92,9 +98,11 @@ En la consola de AWS podemos comprobar que efectivamente se ha creado un trigger
 
 ![image1](./images/image1.png)
 
+<hr>
 
 <a name="offline"></a>
-## Desarrollar en modo offline para evitar gastos en AWS
+
+## 4. Desarrollar en modo offline para evitar gastos en AWS
 
 Iniciamos el proyecto de node 
 
@@ -121,9 +129,11 @@ Este comando levantará un servidor local con nuestra función:
 
 ![image1](./images/image2.png)
 
+<hr>
 
 <a name="params"></a>
-## Pasar y recoger parámetros en modo de segmento por la url
+
+## 5. Pasar y recoger parámetros en modo de segmento por la url
 
 Podemos pasar parámetros de segmento de la siguiente forma: 
 
@@ -157,9 +167,11 @@ module.exports.hello = async event => {
 };
 ~~~
 
+<hr>
 
 <a name="post"></a>
-## Peticiones POST y parsear datos con Querystring
+
+## 6. Peticiones POST y parsear datos con Querystring
 
 Añadimos otra función a nuestro **handler.js**
 
@@ -226,9 +238,11 @@ module.exports.showUser = async event => {
 };
 ~~~
 
+<hr>
 
 <a name="remove"></a>
-## Eliminar proyecto de AWS 
+
+## 7. Eliminar proyecto de AWS 
 
 Para eliminar lo desplegado en AWS simplemente debemos ejecutar 
 
