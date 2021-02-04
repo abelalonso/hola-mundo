@@ -34,7 +34,7 @@ Creamos el proyecto estableciendo el proveedor y el lenguaje en el template y le
 
 Esto nos genera dos archivos **handler.js**  con la función que vamos a desarrollar:
  
-~~~
+~~~js
 module.exports.hello = async event => {
   return { 
     statusCode: 200, 
@@ -80,7 +80,7 @@ El parámetro llega a la función en la variable *event*
 
 En el archivo **serverless.yaml** añadimos dentro de la función el evento desencadenador: 
 
-~~~
+~~~yml
 functions:
   hello:
     handler: handler.hello 
@@ -90,7 +90,7 @@ functions:
           method: get
 ~~~
 
-   ***Mucho ojo con la tabulación entre http y path***
+   > Mucho ojo con la tabulación entre ***http*** y ***path***
 
 Volvemos a desplegar y el cambio relizado en serverless.yaml hará que en la lamda se genere un desencadenador de api gateway de forma automática. Podemos comprobar que esto funciona entrando en la URL que se genera al hacer el deploy. 
 
@@ -114,7 +114,7 @@ Instalamos la libreria serverless offline
 
 Añadimos el plugin al archivo de configuración serverless.yaml 
 
-~~~
+~~~yml
 service: 
   curso-sls-hola-mundo 
 plugins: 
@@ -139,7 +139,7 @@ Podemos pasar parámetros de segmento de la siguiente forma:
 
 1. .Editamos la ruta en el archivo **serverless.yaml**
 
-~~~
+~~~yml
 functions:
   hello:
     handler: handler.hello
@@ -151,7 +151,7 @@ functions:
 
 2. Modificamos la función en el archivo **handler.js** para utilizar éste parámetro
 
-~~~
+~~~js
 module.exports.hello = async event => {
   return { 
     statusCode: 200, 
@@ -175,7 +175,7 @@ module.exports.hello = async event => {
 
 Añadimos otra función a nuestro **handler.js**
 
-~~~
+~~~js
 module.exports.showUser = async event => {
   return {
     statusCode: 200,
@@ -193,7 +193,7 @@ module.exports.showUser = async event => {
 
 Configuramos esta nueva ruta en **serverless.yaml**
 
-~~~
+~~~yml
 functions:
   hello:
     handler: handler.hello
@@ -215,13 +215,13 @@ Para trabajar de forma más limpia con los datos que llegan en el body, instalam
 
 Incluimos la librería en **handler.js**
 
-~~~
+~~~js
 const queryString = require('querystring')
 ~~~
 
 Y modificamos la función para aplicar la librería al body que nos viene en la llamada 
 
-~~~
+~~~js
 module.exports.showUser = async event => { 
   const body queryString 'body']) ; 
   return {
@@ -241,10 +241,7 @@ module.exports.showUser = async event => {
 <hr>
 
 <a name="remove"></a>
-<<<<<<< HEAD
 
-=======
->>>>>>> d26781df1a438fdba7895fa3f8a3f4eb0b90e731
 ## 7. Eliminar proyecto de AWS 
 
 Para eliminar lo desplegado en AWS simplemente debemos ejecutar 
